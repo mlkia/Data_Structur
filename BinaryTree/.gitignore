@@ -2,3 +2,6 @@
 bin
 obj
 BinaryTree.csproj
+BinaryTree.sln
+.vs
+Analysen.docx

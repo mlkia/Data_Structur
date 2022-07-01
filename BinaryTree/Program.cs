@@ -1,14 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
-BNood Head= new BNood(8); 
-BNood Right= new BNood(5); 
-BNood Left= new BNood(3); 
+BTree<int> tree = new BTree<int> ();
 
-Console.WriteLine(Head.value);
+Random random = new Random();
+int[] array = new int[10];
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = random.Next(1,100);
+}
 
-Head.Right= Right;
-Head.Left= Left;
+//foreach(int i in array)
+//{
+//    Console.WriteLine(i);
+//    tree.Insert (i);
+//}
 
-Console.WriteLine(Head.Right.value);
-Console.WriteLine(Head.Left.value);
+tree.Insert(65);
+tree.Insert(20);
+tree.Insert(67);
+tree.Insert(14);
+tree.Insert(35);
+tree.Insert(52);
+tree.Insert(27);
+tree.Insert(56);
+tree.Insert(77);
+tree.Insert(84);
+
+Console.WriteLine("--------------------------");
+
+ 
+Console.WriteLine(tree.Exists(77));
+Console.WriteLine(tree.Exists(65));
+
+
+Console.WriteLine(tree.Count());
